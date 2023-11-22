@@ -1,0 +1,5 @@
+sqlalchemy
+flask
+flask-restful
+flask-cors
+greenlet

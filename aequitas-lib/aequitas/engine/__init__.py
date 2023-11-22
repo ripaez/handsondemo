@@ -73,17 +73,13 @@ class NpEncoder(json.JSONEncoder):
         - An Aequitas object
 """
 class Aequitas:
-
-
     # Public Variables
     dataset=pd.DataFrame()
 
     # Privates Variables
     __transformers=None
 
-
     # Constructors
-
     def __init__(self):
         self.parameters={}
         self.dataset=pd.DataFrame()
@@ -98,7 +94,7 @@ class Aequitas:
         - parameters (dict): A dictionary containing the additional information
     Returns:
         - An Aequitas object
-"""
+    """
     def __init__(self, data:pd.DataFrame, params:dict = {}):
 
         self.parameters={}
@@ -122,7 +118,6 @@ class Aequitas:
 
 
     # Helper Functions
-
 
     """ Function: Set parameters 
 

@@ -278,7 +278,7 @@ def inverse_transform_data(data: pd.DataFrame, transform_dict:dict, transformers
 
     Description:
         Splits the dataset into training and test samples.
-
+    
     Parameters:
         - data (pd.DataFrame): The Dataset.
         - ratio (float): The percentage of dataset's size that will be used as a test sample.
@@ -287,10 +287,10 @@ def inverse_transform_data(data: pd.DataFrame, transform_dict:dict, transformers
         - result (tuple) : The training sample (pd.dataframe) and the test sample (pd.dataframe),
 """
 @type_check
-def split_dataset(data: pd.DataFrame,ratio: float = 0.2, random_state: int =0)->tuple:
+def split_dataset(data: pd.DataFrame, ratio: float = 0.2, random_state: int =0)->tuple:
 
     if (ratio>0):
-        test_sample = data.sample(frac = ratio, random_state=132)
+        test_sample = data.sample(frac = ratio, random_state = 42)
         training_sample = data.drop(test_sample.index)
     else:
         test_sample=pd.DataFrame([])
